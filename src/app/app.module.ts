@@ -14,9 +14,11 @@ import { NewsComponent } from '../components/news/news.component';
 
 
 
-// import 'ionicons/dist/scss/ionicons';
-// import 'ionic-angular/css/ionic.min';
-import '../scss/index.scss';
+
+// import '../styleSheet/scss/ionic.bundle';
+import 'ionicons/dist/scss/ionicons';
+import 'ionic-angular/css/ionic.min';
+
 @NgModule({
     declarations: [
         AppComponent,HomePage,TabsComponent,

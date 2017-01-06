@@ -30,7 +30,7 @@ module.exports = {
             loader: 'url-loader',
             query: {
                 limit: 10000,
-                name: 'img/[name].[hash:7].[ext]'
+                name: 'img/[name].[ext]'
             }
         } ,{
             test: /\.json$/,
@@ -40,7 +40,8 @@ module.exports = {
             loader: 'file-loader',
             query:{
                 limit: 10000,
-                name: 'fonts/[name].[hash:7].[ext]'
+                // name: 'fonts/[name].[hash:7].[ext]'
+                name: 'fonts/[name].[ext]'
             }
         }],
         exprContextCritical: false  // angular 警告错误
@@ -50,6 +51,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'My App',
             template: path.resolve(__dirname, '../src/index.html')
+
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['main', 'polyfills', 'vendors']

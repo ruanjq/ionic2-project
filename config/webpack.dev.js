@@ -8,21 +8,26 @@ module.exports = webpackMerge(commonConfig, {
     output: {
         path: path.join(__dirname, 'src'),
         publicPath: '/',
-        filename: '[name].js',
+        filename: 'js/[name].js',
         chunkFilename: '[id].chunk.js'
     },
     module: {
         loaders: [{
             test: /\.css$/,
-            loaders: ["style-loader", "css-loader","raw-loader"]
-        }, {
+            loader: ExtractTextPlugin.extract({
+                fallbackLoader: "style-loader",
+                loader: "css-loader"
+            })
+        },{
             test: /\.scss$/,
-            loaders: ["style-loader", "css-loader", "sass-loader","raw-loader"]
-                // loader: ExtractTextPlugin.extract(["css-loader", "sass-loader"])
+            loader: ExtractTextPlugin.extract({
+                fallbackLoader: "style-loader",
+                loader: "css-loader!sass-loader"
+            })
         }]
     },
     plugins: [
-        new ExtractTextPlugin('[name].css')
+        new ExtractTextPlugin('css/[name].css')
     ],
 
     devServer: {

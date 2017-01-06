@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, Slides, ActionSheetController,AlertController  } from 'ionic-angular';
 @Component({
     selector: 'page-home',
-    templateUrl: './home.html'
-    // styles: ["" + require('./home.scss') + ""]
+    templateUrl: './home.html',
+    styles: ["" + require('./home.scss') + ""]
 })
 
 export class HomePage {
