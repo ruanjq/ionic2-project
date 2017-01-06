@@ -1,0 +1,7 @@
+{
+  "name": "ionic2-webpack-boilerplate",
+  "globalDependencies": {
+    "core-js": "registry:dt/core-js#0.9.7+20161130133742",
+    "googlemaps": "registry:dt/googlemaps#3.25.0+20161228203806"
+  }
+}

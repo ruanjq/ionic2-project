@@ -1,0 +1,7 @@
+
+ion-slides{
+	&.banner-top{
+		height: auto;
+		.swiper-slide img{width: 100%; height: auto; display: block;vertical-align: bottom;}
+	}
+}

@@ -1,0 +1,81 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button icon-only menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+
+        <ion-title>
+        	Home
+        </ion-title>
+
+        <!-- 右按钮 -->
+        <ion-buttons end>
+            <button ion-button icon-only (click)="showActionSheet()">
+                <ion-icon name="more"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-slides class="banner-top" [options]="bannerSlidesOpt">
+        <ion-slide>
+            <img src="../../images/banner01.jpg" />
+        </ion-slide>
+        <ion-slide>
+            <img src="../../images/banner02.jpg" />
+        </ion-slide>
+        <ion-slide>
+            <img src="../../images/banner03.jpg" />
+        </ion-slide>
+    </ion-slides>
+    <ion-list>
+        <ion-item>
+            <ion-thumbnail item-left>
+                <img src="../../images/thumbnail-totoro.png">
+            </ion-thumbnail>
+            <h2>My Neighbor Totoro</h2>
+            <p>Hayao Miyazaki • 1988</p>
+            <button ion-button clear item-right>View</button>
+        </ion-item>
+        <ion-item>
+            <ion-thumbnail item-left>
+                <img src="../../images/thumbnail-batman.png">
+            </ion-thumbnail>
+            <h2>My Neighbor Totoro</h2>
+            <p>Hayao Miyazaki • 1988</p>
+            <button ion-button clear item-right>View</button>
+        </ion-item>
+        <ion-item>
+            <ion-thumbnail item-left>
+                <img src="../../images/thumbnail-bttf.png">
+            </ion-thumbnail>
+            <h2>My Neighbor Totoro</h2>
+            <p>Hayao Miyazaki • 1988</p>
+            <button ion-button clear item-right>View</button>
+        </ion-item>
+        <ion-item>
+            <ion-thumbnail item-left>
+                <img src="../../images/thumbnail-esb.png">
+            </ion-thumbnail>
+            <h2>My Neighbor Totoro</h2>
+            <p>Hayao Miyazaki • 1988</p>
+            <button ion-button clear item-right>View</button>
+        </ion-item>
+        <ion-item>
+            <ion-thumbnail item-left>
+                <img src="../../images/thumbnail-ghostbusters.png">
+            </ion-thumbnail>
+            <h2>My Neighbor Totoro</h2>
+            <p>Hayao Miyazaki • 1988</p>
+            <button ion-button clear item-right>View</button>
+        </ion-item>
+        <ion-item>
+            <ion-thumbnail item-left>
+                <img src="../../images/thumbnail-rotla.png">
+            </ion-thumbnail>
+            <h2>My Neighbor Totoro</h2>
+            <p>Hayao Miyazaki • 1988</p>
+            <button ion-button clear item-right>View</button>
+        </ion-item>
+    </ion-list>
+</ion-content>
