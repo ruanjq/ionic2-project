@@ -7,8 +7,8 @@ module.exports = {
     entry: {
         'polyfills': './src/polyfills.ts',
         'main': './src/main.ts',
-        // 'main': './src/app/app.module.ts',
-        'vendors': './src/vendors.ts'
+        'vendors': './src/vendors.ts',
+        'ionic.bundle':['ionicons/dist/scss/ionicons','ionic-angular/css/ionic.min']   // ionic.bundle.css 单独打包
     },
 
     resolve: {
@@ -20,7 +20,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.ts$/,
-            loaders: ['awesome-typescript-loader', 'angular2-template-loader'],
+            loaders: ['@angularclass/hmr-loader','awesome-typescript-loader', 'angular2-template-loader'],
             exclude: /node_modules/
         }, {
             test: /\.html$/,

@@ -15,9 +15,7 @@ import { NewsComponent } from '../components/news/news.component';
 
 
 
-// import '../styleSheet/scss/ionic.bundle';
-import 'ionicons/dist/scss/ionicons';
-import 'ionic-angular/css/ionic.min';
+import '../styleSheet/scss/index';
 
 @NgModule({
     declarations: [
@@ -40,4 +38,6 @@ import 'ionic-angular/css/ionic.min';
     providers: []
 })
 export class AppModule{}
+
+
 

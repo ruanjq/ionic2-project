@@ -23,16 +23,33 @@ module.exports = webpackMerge(commonConfig, {
     module: {
         loaders: [{
             test: /\.css$/,
+            include: path.resolve(__dirname, "../src"),
             loader: ExtractTextPlugin.extract({
                 fallbackLoader: "style-loader",
                 loader: "css-loader"
             })
         }, {
+            test: /\.css$/,
+            include: /node_modules/,
+            loader: ExtractTextPlugin.extract({
+                fallbackLoader: "style-loader",
+                loader: "css-loader",
+                publicPath: "../"     // 过滤 ionicons/dist/scss/ionicons 文件中的fonts 路径
+            })
+        }, {
             test: /\.scss$/,
+            include: path.resolve(__dirname, "../src"),
+            loader: ExtractTextPlugin.extract({
+                fallbackLoader: "style-loader",
+                loader: "css-loader!sass-loader"
+            })
+        }, {
+            test: /\.scss$/,
+            include: /node_modules/,
             loader: ExtractTextPlugin.extract({
                 fallbackLoader: "style-loader",
                 loader: "css-loader!sass-loader",
-                publicPath:"../"
+                publicPath: "../"  // 过滤 ionic-angular/css/ionic.min 文件中的fonts 路径
             })
         }]
     },
