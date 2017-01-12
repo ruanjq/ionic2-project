@@ -3,12 +3,13 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
 let path = require('path');
+
 module.exports = {
     entry: {
         'polyfills': './src/polyfills.ts',
         'main': './src/main.ts',
         'vendors': './src/vendors.ts',
-        'ionic.bundle':['ionicons/dist/scss/ionicons','ionic-angular/css/ionic.min']   // ionic.bundle.css 单独打包
+        'ionic.bundle':['ionicons/dist/scss/ionicons','ionic-angular/css/ionic.min']  // ionic.bundle.css 单独打包
     },
 
     resolve: {
@@ -20,7 +21,7 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.ts$/,
-            loaders: ['@angularclass/hmr-loader','awesome-typescript-loader', 'angular2-template-loader'],
+            loaders: ['awesome-typescript-loader', 'angular2-template-loader'],
             exclude: /node_modules/
         }, {
             test: /\.html$/,
@@ -50,6 +51,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'My App',
+            filename:'index.html',
             template: path.resolve(__dirname, '../src/index.html')
 
         }),

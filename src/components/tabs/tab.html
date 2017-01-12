@@ -1,6 +1,6 @@
 
 <ion-tabs #appTabs>
-	<ion-tab [root]="rootHomePage" tabTitle="Home" tabIcon="keypad" (click)="selectTab(1)"></ion-tab>
-	<ion-tab [root]="rootNewsPage" tabTitle="News" tabIcon="logo-octocat" (click)="selectTab(2)"></ion-tab>
-	<ion-tab [root]="rootUserPage" tabTitle="User" tabIcon="person-add" tabBadge="2" tabBadgeStyle="danger" (click)="selectTab(3)"></ion-tab>
+	<ion-tab [root]="rootHomePage" tabTitle="Home" tabIcon="keypad" (ionSelect)="selectTab(1)"></ion-tab>
+	<ion-tab [root]="rootNewsPage" tabTitle="News" tabIcon="logo-octocat" (ionSelect)="selectTab(2)"></ion-tab>
+	<ion-tab [root]="rootUserPage" tabTitle="User" tabIcon="person-add" tabBadge="2" tabBadgeStyle="danger" (ionSelect)="selectTab(3)"></ion-tab>
 </ion-tabs>

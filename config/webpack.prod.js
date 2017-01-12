@@ -6,7 +6,6 @@ var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 var path = require('path');
 
-const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 
 
 rm('-rf', path.resolve(__dirname, "../cordovaApp/www"));
@@ -16,7 +15,8 @@ module.exports = webpackMerge(commonConfig, {
     devtool: 'source-map',
     output: {
         path: path.resolve(__dirname, '../cordovaApp/www'),
-        publicPath: 'www/',
+        // publicPath: 'www/',
+        publicPath: '',
         filename: 'js/[name].[hash].js',
         chunkFilename: '[id].[hash].chunk.js'
     },
@@ -61,12 +61,7 @@ module.exports = webpackMerge(commonConfig, {
                 keep_fnames: true
             }
         }),
-        new ExtractTextPlugin("css/[name].[hash].css"),
-        new webpack.DefinePlugin({
-            'process.env': {
-                'ENV': JSON.stringify(ENV)
-            }
-        }),
+        new ExtractTextPlugin("css/[name].[hash].css")
         new webpack.LoaderOptionsPlugin({
             options: {
                 htmlLoader: {

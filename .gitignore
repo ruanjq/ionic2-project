@@ -1,3 +1,5 @@
 
 
 node_modules/*
+cordovaApp/platforms/*
+cordovaApp/plugins/*

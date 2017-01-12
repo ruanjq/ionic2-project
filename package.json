@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --hot --inline --progress --port 8080",
-    "build": "webpack --config config/webpack.prod.js --progress",
+    "build": "webpack --config config/webpack.prod.js --progress && node config/cordova.config.js",
     "postinstall": "typings install"
   },
   "dependencies": {
@@ -33,12 +33,17 @@
     "zone.js": "^0.6.26"
   },
   "devDependencies": {
+    "@ngrx/core": "^1.2.0",
+    "@ngrx/store": "^2.2.1",
     "@types/jasmine": "^2.5.35",
     "@types/node": "^6.0.45",
+    "angular-hmr": "^0.2.0",
+    "angular2-hot-loader": "0.0.21",
     "angular2-template-loader": "^0.4.0",
     "autoprefixer-loader": "^3.2.0",
     "awesome-typescript-loader": "^2.2.4",
     "css-loader": "^0.23.1",
+    "express": "^4.14.0",
     "extract-text-webpack-plugin": "^2.0.0-beta.4",
     "file-loader": "^0.8.5",
     "html-loader": "^0.4.3",
@@ -48,6 +53,7 @@
     "ionicons": "^3.0.0",
     "jasmine-core": "^2.4.1",
     "json-loader": "^0.5.4",
+    "ngrx-store-hmr": "git+https://github.com/jFensch/ngrx-store-hmr.git",
     "node-sass": "^3.4.2",
     "npm": "^4.0.5",
     "null-loader": "^0.1.1",

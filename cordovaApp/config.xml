@@ -16,6 +16,16 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <allow-navigation href="data:*"/>
+    
+    <access origin="tel:*" launch-external="yes"/>
+    <allow-navigation href="*"/>
+    <allow-navigation href="http://*/*"/>
+    <allow-navigation href="https://*/*"/>
+    <allow-navigation href="data:*"/>
+    <allow-intent href="*"/>
+    <access origin="*"/>
+
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
@@ -23,4 +33,5 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <preference name="windows-target-version" value="10.0" />
 </widget>
