@@ -1,6 +1,6 @@
 var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var helpers = require('./helpers');
 let path = require('path');
 
@@ -49,11 +49,10 @@ module.exports = {
     },
 
     plugins: [
-        new HtmlWebpackPlugin({
+         new HtmlWebpackPlugin({
             title: 'My App',
             filename:'index.html',
-            template: path.resolve(__dirname, '../src/index.html')
-
+            template: path.resolve(__dirname, '../src/index')
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: ['main', 'polyfills', 'vendors']

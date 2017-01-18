@@ -52,4 +52,12 @@ export class HomePage {
         });
         alert.present();
     }
+
+    dorefresher(ref){
+
+        setTimeout( () =>{
+            ref.complete();
+        },3000)
+        console.log(ref);
+    }
 }

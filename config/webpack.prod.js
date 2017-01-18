@@ -2,6 +2,7 @@ require('shelljs/global');
 var webpack = require('webpack');
 var webpackMerge = require('webpack-merge');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var commonConfig = require('./webpack.common.js');
 var helpers = require('./helpers');
 var path = require('path');
@@ -54,6 +55,10 @@ module.exports = webpackMerge(commonConfig, {
         }]
     },
     plugins: [
+    
+        new webpack.DefinePlugin({
+            'process.env': '"production"'
+        }),
         new webpack.NoErrorsPlugin(),
         new webpack.optimize.DedupePlugin(),
         new webpack.optimize.UglifyJsPlugin({ // https://github.com/angular/angular/issues/10618
@@ -61,7 +66,7 @@ module.exports = webpackMerge(commonConfig, {
                 keep_fnames: true
             }
         }),
-        new ExtractTextPlugin("css/[name].[hash].css")
+        new ExtractTextPlugin("css/[name].[hash].css"),
         new webpack.LoaderOptionsPlugin({
             options: {
                 htmlLoader: {

@@ -28,6 +28,10 @@ module.exports = webpackMerge(commonConfig, {
         }]
     },
     plugins: [
+       
+        new webpack.DefinePlugin({
+            'process.env': '"developer"'
+        }),
         new ExtractTextPlugin('css/[name].css'),
         new webpack.HotModuleReplacementPlugin()
     ],
