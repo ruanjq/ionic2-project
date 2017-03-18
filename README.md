@@ -1,7 +1,7 @@
 
 # ionic2 App
 
-![项目摘要图](https://github.com/fengyi123/operationManage/blob/master/src/images/home.png)
+![项目摘要图](https://github.com/fengyi123/ionic2-project/blob/master/src/images/GIF.gif)
 
 
 ## 前端相关技术：Webpack2.0、、、Angualr2.0，，，Ionic2.0，， Cordova，，Typescript ，，ES6 
